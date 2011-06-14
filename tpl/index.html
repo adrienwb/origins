@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" charset="utf-8"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" charset="utf-8"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" charset="utf-8"></script>
+  
+  <script src="http://jackrugile.com/jrumble/js/jrumble.1.1.min.js"></script>
+  
+  <link href="css/base.css" rel="stylesheet" type="text/css"/>
+  <link href="css/fb.css" rel="stylesheet" type="text/css"/>
+  
+  <link rel="stylesheet" href="css/uniform.default.css" type="text/css" media="screen">
+  <script src="js/main.js"></script>
+
+	<title>origins</title>
+
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId   : '{{fbAppId}}',
+          status  : true, // check login status
+          cookie  : true, // enable cookies to allow the server to access the session
+          xfbml   : true // parse XFBML
+        });
+
+        // whenever the user logs in, we refresh the page
+        FB.Event.subscribe('auth.login', function() {
+          window.location.reload();
+        });
+      };
+      
+      (function() {
+        var e = document.createElement('script');
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+      }());
+
+
+    </script>
+
+
+	<div class="fb2"><a href="#">origins</a> <a href="invite.php">invite</a></div>
+	<div class="fbx">
+	  <h3>Facebook Status ---&gt; .fbx </h3>
+	  <img width="32" hspace="10px" height="32" align="left" alt="AK Status" src="img/elements/3.png">cool stuff coming soon. <br>
+	  <span class="fbx-tiny">a moment ago</span> <a class="fbx-tiny" href="#">settings</a><br>
+	</div>
+
+	
+	<div class="message ui-state-highlight ui-corner-all"> 
+		<p><span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-info"></span>
+		<strong>Hey!</strong> <span id="message-content"></span></p>
+	</div>
+
+    <div style="clear:both"></div>  
+    
+	<form id="gallery" action="ajax.php">
+
+		<div id="gallery_wrapper">
+			<ul id="elements">
+				{{{gallery}}}
+			</ul>
+		</div>
+
+		<input type="submit" value="add"/>
+
+	</form>	
+
+
+	<div id="playground"></div>
+	
+
+    
+
+
+
+
+  </body>
+</html>

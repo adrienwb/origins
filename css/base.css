@@ -1,0 +1,45 @@
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #666;
+padding: 0 40px;
+}
+.element{ border: 1px solid #000;width: 25px; height: 25px; background: silver; padding: 10px;position:relative; }
+.draggable { width: 75px; height: 25px; background: silver; padding: 10px; }
+.droppable { position: absolute; left: 250px; top: 0; width: 75px; height: 25px; background: gray; color: white; padding: 10px; }
+
+#playground{
+    border: 1px solid #DDDDDD;
+    clear: right;
+    height: 300px;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+
+.message{
+padding: 0 .7em;
+display:none;
+width:70%;
+}
+
+#gallery_wrapper{margin-top: 0;background:#f7f7f7;margin:10px;text-align:left;font-size: 11px;width:100%}
+#gallery_wrapper a:focus,#gallery_wrapper a:hover,#gallery_wrapper a:active{outline:none}
+#gallery_wrapper #elements{z-index:1;padding:0 0 0 3px;height:210px;overflow:auto;border:1px solid #c1c1c1;background:#fff}
+#gallery_wrapper #elements li{float:left;margin:3px;height:64px;overflow:hidden;cursor:hand;width:134px}
+#gallery_wrapper #elements a{display:block;height:56px;padding:4px}
+#gallery_wrapper #elements a:hover{text-decoration:none}
+#gallery_wrapper #elements .square{position:relative;float:left;border:1px solid #e0e0e0;margin-right:5px;padding:2px;display:block;height:50px;width:50px;background-position:2px 2px;background-repeat:no-repeat;background-color:#fff;cursor:hand}
+#gallery_wrapper #elements .square span{position:absolute;top:2px;left:2px;display:block;height:50px;width:50px;background-position:bottom left;background-repeat:no-repeat}
+#gallery_wrapper #elements strong{display:block;float:left;width:65px}
+#gallery_wrapper #elements strong{font-size: 11px;color:#222;font-weight:normal;margin-top:2px;cursor:hand}
+#gallery_wrapper #elements a:hover{background:url(http://wiesebron.org/alchemy/img/hover.gif) no-repeat top left}
+#gallery_wrapper #elements a:hover strong{color:#000}
+#gallery_wrapper #elements a:hover .square{border-color:#205c98}
+#gallery_wrapper #elements li.selected{background:url(http://wiesebron.org/alchemy/img/selected.gif) no-repeat top left}
+#gallery_wrapper #elements li.selected strong{color:#fff}
+#gallery_wrapper #elements li.selected span{color:#c3cddf}
+#gallery_wrapper #elements li.selected a:hover,#gallery_wrapper #elements li.selected a{color:#e7ebf5;background:url(http://static.ak.fbcdn.net/rsrc.php/v1/zI/r/Te11kMtdw9b.gif) no-repeat top left}
+#gallery_wrapper #elements li.selected em{color:#fff;background:#6e84b3}
+#gallery_wrapper #elements li.selected a:hover em,#gallery_wrapper #elements li.selected a:hover strong{color:#fff}
+#gallery_wrapper #elements li.selected .square{border-color:#b1c1e1;background-color:#8497c0}
+#gallery_wrapper #elements li.selected .square span{background-image:url(http://wiesebron.org/alchemy/img/checked.gif)}

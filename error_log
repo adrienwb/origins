@@ -1,0 +1,35 @@
+[13-Apr-2011 14:22:06] PHP Fatal error:  Call to a member function select() on a non-object in /home2/wiesebro/public_html/alchemy/index.php on line 6
+[13-Apr-2011 14:27:49] PHP Fatal error:  Call to a member function select() on a non-object in /home2/wiesebro/public_html/alchemy/index.php on line 6
+[24-Apr-2011 07:17:19] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 49
+[24-Apr-2011 07:17:57] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 49
+[24-Apr-2011 07:18:43] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 50
+[24-Apr-2011 07:19:14] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 51
+[24-Apr-2011 07:19:34] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 51
+[24-Apr-2011 07:20:11] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 50
+[24-Apr-2011 07:20:17] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 50
+[24-Apr-2011 07:20:39] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 50
+[24-Apr-2011 07:21:22] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 52
+[24-Apr-2011 07:21:38] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 52
+[25-Apr-2011 09:21:43] PHP Fatal error:  Class 'element' not found in /home2/wiesebro/public_html/alchemy/ajax.php on line 14
+[26-Apr-2011 14:10:10] CurlException: 28: connect() timed out!
+[26-Apr-2011 15:45:45] PHP Fatal error:  Uncaught OAuthException: Error validating access token.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[26-Apr-2011 15:46:48] PHP Warning:  Invalid argument supplied for foreach() in /home2/wiesebro/public_html/alchemy/index.php on line 38
+[26-Apr-2011 23:36:55] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[26-Apr-2011 23:50:44] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[27-Apr-2011 00:19:18] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[27-Apr-2011 00:35:06] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[27-Apr-2011 16:14:31] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[27-Apr-2011 23:50:41] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[29-Apr-2011 00:48:11] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[29-Apr-2011 16:16:05] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
+[29-Apr-2011 17:31:48] PHP Fatal error:  Uncaught OAuthException: An active access token must be used to query information about the current user.
+  thrown in /home2/wiesebro/public_html/alchemy/inc/libs/facebook-php-sdk/src/facebook.php on line 560
