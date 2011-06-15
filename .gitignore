@@ -2,4 +2,4 @@
 .settings
 .project
 .buildpath
-conf.php
+inc/conf.php
