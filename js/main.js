@@ -10,16 +10,6 @@ $(document).ready(function () {
 		return false;
     });
 
-    $(".element").draggable({
-        cursor: "move",
-        opacity: 0.7,
-        stack: "#playground div" 
-    }).droppable({
-        drop: function (event, ui) {
-           combine(ui,$(this));
-           }
-    });
-
 });
 
 function unselectAllElements(){
@@ -47,7 +37,6 @@ function combine(ui, $this) {
 	var dragged = ui.draggable.attr('id');
 	var dropped = $this.attr('id');
 
-	console.log(ui.position.left,ui.position.top);
 	$.post("ajax.php", {
 		action: 'combine',
 		source: dragged,
@@ -59,20 +48,10 @@ function combine(ui, $this) {
 			$('.message').fadeIn('slow', function () {
 				// Animation complete.
 				$('#message-content').html('good job, ' + data.name + ' created');
-
+				$("#elements").append('<li element="'+data.id+'"><a onclick="selectElement(this); return false;" title="'+data.name+'" href="#">'+
+						'<span style="background-image: url(&quot;img/elements/'+data.id+'.png&quot;);" class="square"><span></span></span><strong'+data.name+'</strong></a></li>');
 			});
-			$('#playground').append('<div class="element" id="' + data.id + '"><img src="img/elements/' + data.id + '.png" /></div>');
-
-
-			$("#"+data.id).draggable({
-				cursor: "move",
-				opacity: 0.7,
-				stack: "#playground div" 
-			}).droppable({
-				drop: function (event, ui) {
-				   combine(ui,$(this));
-				   }
-			});
+			addElement(data.id,ui.position.left,ui.position.top);
 
 			$('#'+dragged).remove();
 			$('#'+dropped).remove();
@@ -87,7 +66,7 @@ function combine(ui, $this) {
 	});
 }
 
-function addElement(id){
+function addElement(id,left,top){
 	$('#playground').append('<div class="element" id="' + id + '"><img src="img/elements/' + id + '.png" /></div>');
 	$(".element").draggable({
 		cursor: "move",
@@ -98,6 +77,7 @@ function addElement(id){
 		   combine(ui,$(this));
 		   }
 	});
+
 	$(".element").css('left','40px').css('top','40px');
 
 }

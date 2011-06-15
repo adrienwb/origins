@@ -23,4 +23,15 @@ class element{
 		return $select['0'];
 	}
 
+	public function giveToUser($id,$fbId){
+		$savedElements=$this->db->select('users', "facebook_id=$fbId");
+		$explodedElements=explode(',', $savedElements['0']['saved_elements']);
+		
+		if (!in_array($id, $explodedElements)) {
+		    array_push($explodedElements, $id);
+		    $implodedElements = implode(",", $explodedElements);
+		    return $this->db->update('users',array('saved_elements'=>$implodedElements), "facebook_id=$fbId");
+		}
+		
+	}
 }

@@ -2,7 +2,7 @@ body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #666;
 padding: 0 40px;
-width:760px;
+width:710px;
 }
 
 .element{ border: 1px solid #000;width: 25px; height: 25px; background: silver; padding: 10px;position:relative; }
@@ -10,12 +10,12 @@ width:760px;
 .droppable { position: absolute; left: 250px; top: 0; width: 75px; height: 25px; background: gray; color: white; padding: 10px; }
 
 #playground{
-    border: 1px solid #DDDDDD;
-    clear: right;
-    height: 300px;
-    overflow: auto;
-    position: relative;
-    width: 100%;
+border: 1px solid #DDDDDD;
+clear: right;
+height: 300px;
+overflow: auto;
+position: relative;
+width: 100%;
 }
 
 .message{

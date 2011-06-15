@@ -3,9 +3,8 @@ class user{
 
 	public $db;
 	public $facebook;
-	
 
-	public function __construct($db, $facebook) {
+	public function __construct($db,$facebook) {
 		$this->db=$db;
 		$this->facebook=$facebook;
 	}
@@ -17,7 +16,7 @@ class user{
 		else return false;	
 	}
 	
-	public function add(){
+	public function create(){
 		$currentUser=$this->facebook->api('/me');
 		$currentUser['facebook_id']=$currentUser['id'];
 		$currentUser['saved_elements']='1,2,3,4';
@@ -25,4 +24,5 @@ class user{
 		$this->db->insert('users',$currentUser);
 	}
 
+	
 }

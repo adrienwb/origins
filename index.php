@@ -13,19 +13,20 @@ $savedElements='';
 if ($uid) {
   try {
     $me = $facebook->api('/me');
-    
-  	if(!$userInfo=$user->exists()) $user->add();
-	else{
-		$savedElements=$userInfo[0]['saved_elements'];	
+
+    if(!$userInfo=$user->exists()) {
+    	$user->create();
+    }else{
+		$savedElements=$userInfo[0]['saved_elements'];
 	}
     
   } catch (FacebookApiException $e) {
     error_log($e);
   }
 }else{
-	$loginUrl = $facebook->getLoginUrl(array('scope'=>'email,user_birthday,publish_stream'));
-	echo("<script> top.location.href='$loginUrl'</script>");
-	exit;
+//	$loginUrl = $facebook->getLoginUrl(array('scope'=>'email,user_birthday,publish_stream'));
+//	echo("<script> top.location.href='$loginUrl'</script>");
+//	exit;
 }
 
 
