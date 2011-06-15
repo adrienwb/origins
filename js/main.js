@@ -1,14 +1,12 @@
 var selectedElements=new Array();
 
 $(document).ready(function () {
-
     $('#gallery').submit(function () {
 
 		for(var i=0; i<selectedElements.length; i++) {
 			var value = selectedElements[i];
 			if(value!=undefined)addElement(i);
 		}
-
 		return false;
     });
 
@@ -24,6 +22,17 @@ $(document).ready(function () {
 
 });
 
+function unselectAllElements(){
+	for(var i=0; i<selectedElements.length; i++) {
+		var value = selectedElements[i];
+		if(value!=undefined){
+			$('li[element='+i+']').removeClass('selected');
+		}
+	}
+	selectedElements=new Array();
+	return false;
+}
+
 function selectElement(obj){
 	if($(obj.parentNode).hasClass('selected')){
 		$(obj.parentNode).removeClass('selected');
@@ -38,17 +47,15 @@ function combine(ui, $this) {
 	var dragged = ui.draggable.attr('id');
 	var dropped = $this.attr('id');
 
-
+	console.log(ui.position.left,ui.position.top);
 	$.post("ajax.php", {
 		action: 'combine',
 		source: dragged,
 		target: dropped
 	}, function (data) {
 
-
 		if (data != null) {
-			console.log(data);
-
+			
 			$('.message').fadeIn('slow', function () {
 				// Animation complete.
 				$('#message-content').html('good job, ' + data.name + ' created');
@@ -81,18 +88,16 @@ function combine(ui, $this) {
 }
 
 function addElement(id){
-
-				$('#playground').append('<div class="element" id="' + id + '"><img src="img/elements/' + id + '.png" /></div>');
-
-
-			$("#"+id).draggable({
-				cursor: "move",
-				opacity: 0.7,
-				stack: "#playground div" 
-			}).droppable({
-				drop: function (event, ui) {
-				   combine(ui,$(this));
-				   }
-			});
+	$('#playground').append('<div class="element" id="' + id + '"><img src="img/elements/' + id + '.png" /></div>');
+	$(".element").draggable({
+		cursor: "move",
+		opacity: 0.7,
+		stack: "#playground div" 
+	}).droppable({
+		drop: function (event, ui) {
+		   combine(ui,$(this));
+		   }
+	});
+	$(".element").css('left','40px').css('top','40px');
 
 }

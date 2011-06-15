@@ -6,12 +6,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" charset="utf-8"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" charset="utf-8"></script>
   
-  <script src="http://jackrugile.com/jrumble/js/jrumble.1.1.min.js"></script>
   
   <link href="css/base.css" rel="stylesheet" type="text/css"/>
-  <link href="css/fb.css" rel="stylesheet" type="text/css"/>
   
-  <link rel="stylesheet" href="css/uniform.default.css" type="text/css" media="screen">
   <script src="js/main.js"></script>
 
 	<title>origins</title>
@@ -44,15 +41,6 @@
 
     </script>
 
-
-	<div class="fb2"><a href="#">origins</a> <a href="invite.php">invite</a></div>
-	<div class="fbx">
-	  <h3>Facebook Status ---&gt; .fbx </h3>
-	  <img width="32" hspace="10px" height="32" align="left" alt="AK Status" src="img/elements/3.png">cool stuff coming soon. <br>
-	  <span class="fbx-tiny">a moment ago</span> <a class="fbx-tiny" href="#">settings</a><br>
-	</div>
-
-	
 	<div class="message ui-state-highlight ui-corner-all"> 
 		<p><span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-info"></span>
 		<strong>Hey!</strong> <span id="message-content"></span></p>
@@ -69,17 +57,12 @@
 		</div>
 
 		<input type="submit" value="add"/>
+        <a href="#" onclick="unselectAllElements();">unselect elements</a>
+        <a href="#" onclick="$('div').remove('.element');return false;">clear dashboard</a>
 
 	</form>	
 
-
 	<div id="playground"></div>
-	
-
     
-
-
-
-
   </body>
 </html>
